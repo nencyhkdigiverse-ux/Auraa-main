@@ -910,16 +910,17 @@ a {
 }
 
 .bg-text-main {
-  font-size: 18vw;
+  font-size: 14vw;
   line-height: 0.8;
   font-weight: 800;
   text-transform: uppercase;
   color: rgba(46, 125, 50, 0.03);
   margin: 0;
+  white-space: nowrap;
 }
 
 .bg-text-sub {
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: 300;
   letter-spacing: 0.5em;
   color: rgba(27, 94, 32, 0.05);
