@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}DesiDairy - Fresh Gaushala Milk | Pure A2 Cow Milk{% endblock %}
+
+{% block content %}
+
+{% comment %} <!-- Hero Section - Gaushala -->
+<section class="scrolly-hero">
+    <div class="hero-sticky-wrapper gaushala-hero-bg">
+        <div class="hero-overlay gaushala-hero-overlay"></div>
+
+        <!-- 0% Scroll -->
+        <div class="hero-content hero-text-0">
+            <h1 class="hero-title">Pure Gaushala Milk</h1>
+        </div>
+
+        <!-- 30% Scroll -->
+        <div class="hero-content hero-text-30">
+            <p class="hero-subtitle">Fresh A2 Cow Milk – Straight from our Gaushala to your Home</p>
+        </div>
+
+        <!-- 90% Scroll -->
+        <div class="hero-content hero-text-60">
+            <a href="{% url 'products' %}" class="btn btn-hero">Order Fresh Milk</a>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+<!-- Scrollytelling Hero Section -->
+<section class="scrolly-hero">
+    <div class="hero-sticky-wrapper">
+        <canvas id="hero-sequence"></canvas>
+        <div class="hero-overlay"></div>
+
+        <!-- 0% Scroll:  -->
+        <div class="hero-content hero-text-0">
+            <h1 class="hero-title">Pure Glacial Hydration</h1>
+        </div>
+
+        <!-- 30% Scroll: -->
+        <div class="hero-content hero-text-30">
+            <p class="hero-subtitle">Freshness through regional proximity</p>
+        </div>
+
+        <!-- 90% Scroll:  -->
+        <div class="hero-content hero-text-60">
+            <a href="{% url 'products' %}" class="btn btn-hero">Experience Purity</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Occasions Section -->
+<section class="occasions section">
+    <div class="container text-center">
+        <h2 class="occasions-title">FRESH MILK FOR EVERY MOMENT!</h2>
+        <p class="occasions-subtitle">Start your day right! With DesiDairy Fresh Gaushala Milk, you get 100% pure A2 cow
+            milk –
+            perfect for your morning chai, healthy smoothies, growing kids, or just a warm glass before bed.
+            DesiDairy is your trusted milk partner!</p>
+
+        <div class="occasions-grid">
+            <!-- Card 1: Pure Desi Cow Milk -->
+            <div class="occasion-card desi-cow-milk-bg" data-occasion="morning">
+                <div class="card-label-overlay">
+                    <span>PURE DESI COW MILK</span>
+                </div>
+            </div>
+
+            <!-- Card 2: Pure Desi Cow Ghee - Featured -->
+            <div class="occasion-card occasion-card-featured desi-cow-ghee-bg" data-occasion="family">
+                <div class="card-label-overlay">
+                    <span>PURE DESI COW GHEE</span>
+                </div>
+            </div>
+
+            <!-- Card 3: Pure Desi Gir Cow Milk -->
+            <div class="occasion-card desi-gir-cow-milk-bg" data-occasion="health">
+                <div class="card-label-overlay">
+                    <span>PURE DESI GIR COW MILK</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Milk Process Teaser -->
+<section class="process-teaser section">
+    <div class="container">
+        <h2 class="section-title">From Gaushala to Your Glass</h2>
+        <div class="process-visual">
+            <div class="drop-container">
+                <div class="milk-drop"
+                    style="background: linear-gradient(135deg, #fff8e1, #fff3cd); box-shadow: 0 0 40px rgba(255,220,100,0.4);">
+                </div>
+            </div>
+            <div class="layers-container">
+                <div class="layer layer-rock">
+                    <span>Gaushala Farm</span>
+                </div>
+                <div class="layer layer-sand">
+                    <span>Quality Testing</span>
+                </div>
+                <div class="layer layer-charcoal">
+                    <span>Pasteurization</span>
+                </div>
+            </div>
+            <div class="final-bottle">
+                <span>Fresh at your Door</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose DesiDairy Milk Section -->
+<section class="section" style="background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%); padding: 5rem 0;">
+    <div class="container text-center">
+        <h2 class="section-title" style="color: #2e7d32;">Why Choose DesiDairy Milk?</h2>
+        <p style="color:#555; max-width:600px; margin:0 auto 3rem; font-size:1.1rem;">We believe in honest farming,
+            natural nutrition, and delivering happiness in every drop.</p>
+
+        <div
+            style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:2rem; margin-top:2rem;">
+            <div class="glass" style="padding:2rem; border-radius:1rem; text-align:center;">
+                <div style="font-size:3rem;">🐄</div>
+                <h3 style="color:#2e7d32; margin:1rem 0 0.5rem;">Pure A2 Milk</h3>
+                <p style="color:#555; font-size:0.95rem;">Sourced from indigenous Gir & Sahiwal cows raised with love at
+                    our Gaushala.</p>
+            </div>
+            <div class="glass" style="padding:2rem; border-radius:1rem; text-align:center;">
+                <div style="font-size:3rem;">🌿</div>
+                <h3 style="color:#2e7d32; margin:1rem 0 0.5rem;">No Hormones</h3>
+                <p style="color:#555; font-size:0.95rem;">Our cows are never given artificial hormones or antibiotics –
+                    completely natural.</p>
+            </div>
+            <div class="glass" style="padding:2rem; border-radius:1rem; text-align:center;">
+                <div style="font-size:3rem;">🚚</div>
+                <h3 style="color:#2e7d32; margin:1rem 0 0.5rem;">Daily Fresh Delivery</h3>
+                <p style="color:#555; font-size:0.95rem;">Milk collected at dawn and delivered to your doorstep by
+                    morning – always fresh.</p>
+            </div>
+            <div class="glass" style="padding:2rem; border-radius:1rem; text-align:center;">
+                <div style="font-size:3rem;">🔬</div>
+                <h3 style="color:#2e7d32; margin:1rem 0 0.5rem;">Lab Tested</h3>
+                <p style="color:#555; font-size:0.95rem;">Every batch passes rigorous quality checks for purity, fat
+                    content, and safety.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

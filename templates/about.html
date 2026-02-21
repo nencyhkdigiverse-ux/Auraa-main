@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us - DesiDairy Fresh Gaushala Milk{% endblock %}
+{% block content %}
+
+<!-- About Hero Section -->
+<section class="about-hero">
+    <div class="about-hero-bg">
+        <img src="{% static 'img/about_hero_gir.png' %}" alt="DesiDairy Gir Cows">
+        <div class="about-hero-overlay"></div>
+    </div>
+    <div class="container relative z-10">
+        <div class="about-hero-content">
+            <h1 class="about-hero-title">Born from Love, <br><span>Raised with Care.</span></h1>
+            <p class="about-hero-subtitle">Discover the journey of DesiDairy – from our sacred Gaushala where cows roam
+                free,
+                to your family's table with the purest A2 milk.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story Section -->
+<section class="about-story section">
+    <div class="container grid-two-cols">
+        <div class="about-story-text reveal-left">
+            <h2 class="section-title text-left">The DesiDairy Gaushala Story</h2>
+            <div class="about-text-content">
+                <p>Founded with a simple mission – to bring the most natural, pure, and nutritious cow milk
+                    directly to Indian families. Our Gaushala is home to indigenous Gir and Sahiwal cows,
+                    lovingly cared for by our farmers.</p>
+                <p>We believe that healthy cows produce the healthiest milk. By maintaining an ethical,
+                    cruelty-free environment with organic feed and open grazing fields, we ensure every
+                    drop of DesiDairy milk is packed with nature's goodness.</p>
+                <div class="about-values-mini">
+                    <div class="mini-value">
+                        <span class="value-number">01</span>
+                        <div class="value-info">
+                            <h4>A2 Purity</h4>
+                            <p>Only indigenous breed cows – naturally producing A2 beta-casein protein milk.</p>
+                        </div>
+                    </div>
+                    <div class="mini-value">
+                        <span class="value-number">02</span>
+                        <div class="value-info">
+                            <h4>Ethical Gaushala</h4>
+                            <p>Cows are never harmed – organic feed, open grazing, and zero hormones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-story-image reveal-right">
+            <div class="image-stack">
+                <img src="{% static 'img/gaushala_hero.jpg'%}"
+                    alt="Happy cows at Gaushala" class="main-img">
+                <div class="floating-stat">
+                    <span class="stat-num">A2</span>
+                    <span class="stat-label">Pure Milk</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Showcase -->
+<section class="about-process section-dark">
+    <div class="container">
+        <h2 class="section-title">Our Milk Journey</h2>
+        <div class="process-cards">
+            <div class="process-card-modern reveal-up">
+                <div class="card-icon">🐄</div>
+                <h3>Natural Grazing</h3>
+                <p>Our indigenous cows graze freely on organic pastures, eating only natural grass, hay, and organic
+                    feed – no commercial fodder.</p>
+            </div>
+            <div class="process-card-modern reveal-up">
+                <div class="card-icon">🧪</div>
+                <h3>Lab Quality Testing</h3>
+                <p>Every batch of milk is tested for purity, fat content, and microbial safety before it reaches your
+                    home.</p>
+            </div>
+            <div class="process-card-modern reveal-up">
+                <div class="card-icon">🏠</div>
+                <h3>Fresh Home Delivery</h3>
+                <p>Milk is collected at dawn and delivered to your doorstep every morning – so you always get it fresh.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Commitment Section -->
+<section class="about-impact section">
+    <div class="container">
+        <div class="impact-header reveal-up">
+            <h2 class="section-title">Our Gaushala Commitment</h2>
+            <p class="section-subtitle">We don't just sell milk – we protect cows, nurture nature,
+                and build a sustainable dairy future for India.</p>
+        </div>
+
+        <div class="impact-grid">
+            <!-- Pillar 1 -->
+            <div class="impact-card glass">
+                <div class="impact-icon">🐮</div>
+                <h3>Cow Welfare First</h3>
+                <p>Every cow at our Gaushala receives daily veterinary care, spacious living quarters, and a stress-free
+                    environment that directly improves milk quality.</p>
+                <div class="impact-meta">
+                    <span class="meta-tag">Cruelty-Free</span>
+                    <span class="meta-tag">Ethical Farming</span>
+                </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="impact-card glass">
+                <div class="impact-icon">🌾</div>
+                <h3>Organic Farming</h3>
+                <p>We grow our own fodder without pesticides or chemicals. Our cows eat only the freshest organic grass
+                    and grains – the purest nutrition for the purest milk.</p>
+                <div class="impact-meta">
+                    <span class="meta-tag">100% Organic Feed</span>
+                    <span class="meta-tag">No Pesticides</span>
+                </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="impact-card glass">
+                <div class="impact-icon">🌱</div>
+                <h3>Sustainable Gaushala</h3>
+                <p>Cow dung is converted to biogas and organic fertilizer, creating a zero-waste circular farm. We give
+                    back more to the earth than we take.</p>
+                <div class="impact-meta">
+                    <span class="meta-tag">Zero Waste</span>
+                    <span class="meta-tag">Eco-Positive</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="impact-bottom">
+            <div class="impact-banner glass">
+                <div class="banner-content">
+                    <h3>Drink Milk. Support Cows. Nourish India.</h3>
+                    <p>Every litre of DesiDairy milk you purchase directly supports the ethical care of our cows
+                        and the growth of our Gaushala. Together, we build a healthier, more natural India.</p>
+                </div>
+                <div class="banner-cta">
+                    <a href="{% url 'products' %}" class="btn btn-primary">Order Fresh Milk</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

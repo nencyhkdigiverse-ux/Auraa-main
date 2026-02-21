@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Our Products - DesiDairy Fresh Milk{% endblock %}
+{% block content %}
+<section class="products-futuristic">
+    <!-- Decorative background elements -->
+    <div class="cyber-grid"></div>
+    <div class="glow-orb orb-1" style="background: radial-gradient(circle, rgba(76,175,80,0.3), transparent);"></div>
+    <div class="glow-orb orb-2" style="background: radial-gradient(circle, rgba(129,199,132,0.2), transparent);"></div>
+
+    <div class="container relative z-10">
+        <h1 class="futuristic-title">Fresh Milk <br> <span class="accent">Collection</span></h1>
+
+        <div class="product-grid">
+            <!-- Product 1: 500ml -->
+            <!-- <div class="product-card cyber-glass" data-hover-speed="0.1">
+                <div class="card-header">
+                    <span class="edition">DesiDairy Milk</span>
+                    <span class="tech-id">#AM-500</span>
+                </div>
+                <div class="bottle-preview"
+                    style="display:flex; align-items:center; justify-content:center; padding:1rem 0;">
+                    <img src="{% static 'img/milk_500ml.png' %}" alt="Fresh Milk 500ml"
+                        style="height: 180px; width: auto; object-fit: contain;">
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name">Fresh Milk 500ml</h3>
+                    <p class="product-desc">Pure A2 cow milk for individuals – perfect for your morning chai or
+                        smoothie.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'bulk_inquiry' %}" class="btn btn-cyber">Order Now</a>
+                </div>
+            </div> -->
+
+            <!-- Product 1 500ml -->
+            <div class="product-card cyber-glass" data-hover-speed="0.1">
+                <div class="card-header">
+                    <span class="edition">DesiDairy Milk</span>
+                    <span class="tech-id">#AM-500</span>
+                </div>
+                <div class="bottle-preview"
+                    style="display:flex; align-items:center; justify-content:center; padding:1rem 0;">
+                    <img src="{% static 'img/500ml.png' %}" alt="Fresh Milk 500ml"
+                        style="height: 200px; width: auto; object-fit: contain;">
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name">Fresh Milk 500ml</h3>
+                    <p class="product-desc">Pure A2 cow milk for individuals – perfect for your morning chai or
+                        smoothie.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'bulk_inquiry' %}" class="btn btn-cyber">Order Now</a>
+                </div>
+            </div>
+            <!-- Product 2: 1 Litre -->
+            <div class="product-card cyber-glass" data-hover-speed="0.15">
+                <div class="card-header">
+                    <span class="edition">DesiDairy Milk</span>
+                    <span class="tech-id">#AM-1000</span>
+                </div>
+                <div class="bottle-preview"
+                    style="display:flex; align-items:center; justify-content:center; padding:1rem 0;">
+                    <img src="{% static 'img/1.png' %}" alt="Fresh Milk 1 Litre"
+                        style="height: 200px; width: auto; object-fit: contain;">
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name">Fresh Milk 1 Litre</h3>
+                    <p class="product-desc">Family pack – rich, creamy A2 milk full of natural calcium and vitamins.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'bulk_inquiry' %}" class="btn btn-cyber">Order Now</a>
+                </div>
+            </div>
+
+            <!-- Product 3: 2 Litre -->
+            <div class="product-card cyber-glass" data-hover-speed="0.2">
+                <div class="card-header">
+                    <span class="edition">DesiDairy Milk</span>
+                    <span class="tech-id">#AM-2000</span>
+                </div>
+                <div class="bottle-preview"
+                    style="display:flex; align-items:center; justify-content:center; padding:1rem 0;">
+                    <img src="{% static 'img/2.png' %}" alt="Fresh Milk 2 Litre"
+                        style="height: 220px; width: auto; object-fit: contain;">
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name">Fresh Milk 2 Litre</h3>
+                    <p class="product-desc">Large family pack – ideal for households and small businesses needing daily
+                        bulk milk.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'bulk_inquiry' %}" class="btn btn-cyber">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscription Banner -->
+        <div class="glass"
+            style="margin-top:4rem; padding:3rem; border-radius:1.5rem; text-align:center; background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(129,199,132,0.2));">
+            <h2 style="color:#2e7d32; margin-bottom:1rem;">📅 Daily Milk Subscription</h2>
+            <p style="color:#555; max-width:600px; margin:0 auto 2rem; font-size:1.05rem;">Subscribe for daily fresh
+                milk delivery at your doorstep. Choose your quantity and get it every morning – fresh from our Gaushala!
+            </p>
+            <a href="{% url 'bulk_inquiry' %}" class="btn btn-primary">Subscribe Now</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
