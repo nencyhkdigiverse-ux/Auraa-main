@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        
+
         const frameCount = 40;
         const currentFrame = index => `/static/bhavin/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`;
 
@@ -374,32 +374,80 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Process Animation (Parallax/Timeline)
+    // // Process Animation (Unique Sliding Dot & Button Highlights)
     const processTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".process-teaser",
             start: "top 60%",
-            end: "bottom 60%",
+            end: "bottom 30%", // End earlier for bottle reveal
             scrub: 1.5,
         }
     });
 
     processTl
+        // Dot travels down the line
         .from(".water-drop", { opacity: 0, duration: 0.5 })
-        .to(".water-drop", { top: "185px", duration: 1, ease: "none" }) // To Rock
+
+        // Phase 1: To Rock (Gaushala Farm)
+        .to(".water-drop", { top: "185px", duration: 1, ease: "none" })
         .to(".layer-rock", { opacity: 1, scale: 1.05, duration: 0.5 }, "<")
         .to(".layer-rock", { opacity: 0.5, scale: 1, duration: 0.5 })
 
-        .to(".water-drop", { top: "300px", duration: 1, ease: "none" }) // To Sand
+        // Phase 2: To Sand (Quality Testing)
+        .to(".water-drop", { top: "300px", duration: 1, ease: "none" })
         .to(".layer-sand", { opacity: 1, scale: 1.05, duration: 0.5 }, "<")
         .to(".layer-sand", { opacity: 0.5, scale: 1, duration: 0.5 })
 
-        .to(".water-drop", { top: "415px", duration: 1, ease: "none" }) // To Charcoal
+        // Phase 3: To Charcoal (Pasteurization)
+        .to(".water-drop", { top: "415px", duration: 1, ease: "none" })
         .to(".layer-charcoal", { opacity: 1, scale: 1.05, duration: 0.5 }, "<")
         .to(".layer-charcoal", { opacity: 0.5, scale: 1, duration: 0.5 })
 
-        .to(".water-drop", { top: "530px", opacity: 0, duration: 0.8, ease: "none" }) // To Bottle
-        .to(".final-bottle", { opacity: 1, y: 0, duration: 1 }, "-=0.2");
+        // Silhouette Reveal: Bottle silhouette slides up from bottom at the very end
+        .to(".final-bottle", {
+            opacity: 1,
+            y: 0, // Slide to its final bottom: 5% position
+            duration: 1.5,
+            ease: "power2.out"
+        }, "-=0.2")
+
+        // Phase 4: Dot finishes and fades out
+        .to(".water-drop", { top: "530px", opacity: 0, duration: 0.8, ease: "none" });
+
+
+    // Tilt effect for process layers
+    const processLayers = document.querySelectorAll('.layer');
+    processLayers.forEach(layer => {
+        layer.addEventListener('mousemove', (e) => {
+            const rect = layer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 5; // More pronounced tilt
+            const rotateY = (centerX - x) / 5;
+
+            gsap.to(layer, {
+                rotationX: rotateX,
+                rotationY: rotateY,
+                transformPerspective: 1000,
+                duration: 0.5,
+                ease: "power2.out"
+            });
+        });
+
+        layer.addEventListener('mouseleave', () => {
+            gsap.to(layer, {
+                rotationX: 0,
+                rotationY: 0,
+                duration: 0.5,
+                ease: "power2.out"
+            });
+        });
+    });
+
 
     // ===== FUTURISTIC PRODUCTS PAGE ANIMATIONS =====
     if (document.querySelector('.products-futuristic')) {
