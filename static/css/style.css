@@ -910,7 +910,7 @@ a {
 }
 
 .bg-text-main {
-  font-size: 25vw;
+  font-size: 18vw;
   line-height: 0.8;
   font-weight: 800;
   text-transform: uppercase;
@@ -919,7 +919,7 @@ a {
 }
 
 .bg-text-sub {
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: 300;
   letter-spacing: 0.5em;
   color: rgba(27, 94, 32, 0.05);
