@@ -9,10 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const frameCount = 37;
-        // const frameCount = 40;
-        const currentFrame = index => `/static/madhvi/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`;
-        // const currentFrame = index => `/static/bhavin/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`;
+        
+        const frameCount = 40;
+        const currentFrame = index => `/static/bhavin/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`;
 
         const images = [];
         const airpods = {

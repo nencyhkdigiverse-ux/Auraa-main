@@ -439,14 +439,41 @@ a {
 /* Steps */
 .process-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 5rem;
+  overflow: visible;
 }
 
 .step {
-  padding: 2rem;
+  padding: 0 0 2rem 0;
   text-align: center;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.step img {
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 5;
+  transition: transform 0.4s ease;
+}
+
+.step:hover img {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.step h3,
+.step p {
+  padding: 0 2rem;
 }
 
 .step-number {
