@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const frameCount = 40;
         const currentFrame = index => `/static/Gauu maata/eg-${(index + 1).toString().padStart(3, '0')}.jpg`;
+        // const currentFrame = index => `/static/PICS ART/eg-${(index + 1).toString().padStart(3, '0')}.jpg`;
 
         const images = [];
         const airpods = {
