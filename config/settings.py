@@ -31,9 +31,13 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-default-key-for-dev')
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+# If the list is empty or only contains an empty string, set defaults
 if not ALLOWED_HOSTS or ALLOWED_HOSTS == ['']:
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.vercel.app']
+else:
+    # Always ensure .vercel.app is included even if env variables are set
+    if '.vercel.app' not in ALLOWED_HOSTS:
+        ALLOWED_HOSTS.append('.vercel.app')
 
 # Application definition
 
@@ -125,8 +129,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Local static folder where your Gauu_maata images are
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# The folder Vercel will create during build (must match vercel.json distDir)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type
