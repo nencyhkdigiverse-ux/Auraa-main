@@ -10,9 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
         canvas.height = window.innerHeight;
 
 
-        const frameCount = 40;
-        const currentFrame = index => `/static/Gauu maata/eg-${(index + 1).toString().padStart(3, '0')}.jpg`;
-        // const currentFrame = index => `/static/PICS ART/eg-${(index + 1).toString().padStart(3, '0')}.jpg`;
+        const frameCount = 27;
+        const currentFrame = index => `/static/Gauu_maata/eg${index + 1}.jpg`;
+        // const currentFrame = index => `/static/PICS_ART/bottle${index + 1}.jpg`;
+        // const currentFrame = index => `/static/Gauu_maata/eg-${(index + 1).toString().padStart(3, '0')}.jpg`;
+        // const currentFrame = index => `/static/PICS_ART/bottle${(index + 1).toString().padStart(3, '0')}-Picsart-AiImageEnhancer.jpg`;
 
         const images = [];
         const airpods = {
