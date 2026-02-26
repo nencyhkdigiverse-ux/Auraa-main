@@ -129,11 +129,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-# Local static folder where your Gauu_maata images are
+# This tells Django where your original images are (The 'static' folder)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-# The folder Vercel will create during build (must match vercel.json distDir)
+# IT MUST BE A NEW FOLDER NAME
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
