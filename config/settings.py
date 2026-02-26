@@ -130,7 +130,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 # Local static folder where your Gauu_maata images are
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 # The folder Vercel will create during build (must match vercel.json distDir)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
